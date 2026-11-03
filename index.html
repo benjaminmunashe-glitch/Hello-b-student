@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benjamin Munashe</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;min-height:100vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:20px}
+.container{max-width:700px;width:100%;background:rgba(255,255,255,.08);padding:40px 30px;border-radius:20px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3)}
+h1{font-size:3rem;margin-bottom:10px}.subtitle{margin-bottom:25px;color:#dbeafe}.description{line-height:1.7;margin-bottom:30px}.date{display:inline-block;background:#2563eb;padding:12px 18px;border-radius:10px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Benjamin</h1>
+<div class="subtitle">MSc student, National College of Ireland</div>
+<p class="description">I care about helping businesses solve decision-making challenges using data analytics, customer insights and evidence-based strategies that improve performance and growth.</p>
+<div class="date" id="date"></div>
+</div>
+<script>
+document.getElementById('date').textContent='Today's Date: '+new Date().toLocaleDateString('en-IE',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
+</body>
+</html>
