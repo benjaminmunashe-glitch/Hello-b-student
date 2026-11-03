@@ -4,22 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Benjamin Munashe</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;min-height:100vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:20px}
-.container{max-width:700px;width:100%;background:rgba(255,255,255,.08);padding:40px 30px;border-radius:20px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3)}
-h1{font-size:3rem;margin-bottom:10px}.subtitle{margin-bottom:25px;color:#dbeafe}.description{line-height:1.7;margin-bottom:30px}.date{display:inline-block;background:#2563eb;padding:12px 18px;border-radius:10px;font-weight:bold}
+body{
+    font-family:Arial, sans-serif;
+    background:#1f356d;
+    color:white;
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    max-width:800px;
+    text-align:center;
+    padding:40px;
+}
+
+h1{
+    font-size:72px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.description{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.date{
+    display:inline-block;
+    background:#2563eb;
+    color:#ffffff;   /* Forces white text */
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    font-size:16px;
+}
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
 <h1>Benjamin</h1>
-<div class="subtitle">MSc student, National College of Ireland</div>
-<p class="description">I care about helping businesses solve decision-making challenges using data analytics, customer insights and evidence-based strategies that improve performance and growth.</p>
-<div class="date" id="date"></div>
+
+<div class="subtitle">
+MSc student, National College of Ireland
 </div>
+
+<div class="description">
+I care about helping businesses solve decision-making challenges using data analytics, customer insights and evidence-based strategies that improve performance and growth.
+</div>
+
+<div id="date" class="date">
+Loading date...
+</div>
+
+</div>
+
 <script>
-document.getElementById('date').textContent='Today's Date: '+new Date().toLocaleDateString('en-IE',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+const today = new Date();
+
+document.getElementById("date").innerHTML =
+"Today's Date: " +
+today.toLocaleDateString("en-IE", {
+weekday: "long",
+year: "numeric",
+month: "long",
+day: "numeric"
+});
 </script>
+
 </body>
 </html>
